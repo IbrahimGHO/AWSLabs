@@ -11,3 +11,21 @@ Parameters:
     Description: Name of the IAM instance profile to attach to the EC2 instance
     Type: String
     Default: MyInstanceProfile
+```
+
+##Resources
+###VPC
+Define a VPC with DNS support and DNS hostnames enabled.
+
+```yaml
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: NV-VPC
+```
+
