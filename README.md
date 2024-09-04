@@ -67,6 +67,7 @@ Objective: Create a public subnet within the VPC that will house the EC2 instanc
 ```
 
 ### Create a Route Table and Public Route
+Objective: Create a Route Table and add a route that directs traffic to the Internet Gateway.
 ```yaml
   RouteTable:
     Type: 'AWS::EC2::RouteTable'
