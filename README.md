@@ -13,8 +13,8 @@ Parameters:
     Default: MyInstanceProfile
 ```
 
-##Resources
-###VPC
+## Resources
+### VPC
 Define a VPC with DNS support and DNS hostnames enabled.
 
 ```yaml
