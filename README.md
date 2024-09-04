@@ -1,4 +1,4 @@
-﻿# AWSLabs
+﻿
 # CloudFormation Lab
 
 ## Objective
