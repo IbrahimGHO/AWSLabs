@@ -18,6 +18,7 @@ Parameters:
 Objective: Create a Virtual Private Cloud (VPC) with a specific CIDR block.
 
 ```yaml
+Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
     Properties:
@@ -33,7 +34,7 @@ Objective: Create a Virtual Private Cloud (VPC) with a specific CIDR block.
 ### Create an Internet Gateway
 Objective: Create an Internet Gateway (IGW) and attach it to the VPC to enable Internet access
 ```yaml
-Resources:
+
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
     Properties:
@@ -52,7 +53,7 @@ Resources:
 Objective: Create a public subnet within the VPC that will house the EC2 instance.
 
 ```yaml
-Resources:
+
   PublicSubnet:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -67,7 +68,6 @@ Resources:
 
 ### Create a Route Table and Public Route
 ```yaml
-Resources:
   RouteTable:
     Type: 'AWS::EC2::RouteTable'
     Properties:
@@ -95,7 +95,6 @@ Resources:
 Objective: Create a Security Group that allows SSH and HTTP traffic to the EC2 instance.
 
 ```yaml
-Resources:
   SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -124,7 +123,6 @@ Resources:
 Objective: Launch an EC2 instance within the public subnet, attach the Security Group, and install Apache server using user data.
 
 ```yaml 
-Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
